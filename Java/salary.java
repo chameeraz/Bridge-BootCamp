@@ -37,10 +37,12 @@ public class salary{
 // selection
 		if(salesv>25000){
 		commis=salesv*25/100;
+
 		System.out.println("The Sales value of each rep "+salesv);
 		System.out.println("The Commission is "+commis);
 		}
 		else{
+
 		System.out.println("The Sales value of each rep "+salesv); 
 		
 		}
