@@ -1,0 +1,69 @@
+package com.win;
+
+import java.sql.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // connect to  database
+        // 1.publish the driver
+        try {
+
+            insertData();
+            displayData();
+
+
+        }
+        catch(ClassNotFoundException ex){
+            System.out.println("Driver not found");
+        }
+        catch (SQLException ex) {
+            System.out.println("Database Error");
+        }
+        System.out.println("After All");
+    }
+
+    static void insertData() throws ClassNotFoundException, SQLException{
+
+        Connection con = getConnection();
+
+        // CRUD
+        Statement stmt = con.createStatement();
+        String queryString = "insert into Student (sid, first_name, last_name) values (013,'James','Bond')";
+        int i = stmt.executeUpdate(queryString);
+        if(i != 0) {
+            System.out.println("Data added successfully");
+        }
+    }
+
+    static void displayData()throws ClassNotFoundException, SQLException {
+
+        Connection con = getConnection();
+
+        // display data
+        String queryString = "select * from Student";
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery(queryString);
+
+        while (rs.next()){
+
+            String id = rs.getString("sid");   //
+            String fname = rs.getString("first_name");
+            String lname = rs.getString("last_name");
+
+            System.out.println("SID = "+id+ " First Name = "+fname+" Last Name ="+lname);
+        }
+    }
+    static Connection getConnection() throws ClassNotFoundException, SQLException {
+        Connection con;
+
+        System.out.println("Program initiated");
+        Class.forName("com.mysql.jdbc.Driver");
+        System.out.println("Published the driver");
+        con= DriverManager.getConnection("jdbc:mysql://localhost:3306/ras","root","");
+        System.out.println("Connected");
+        return con;
+    }
+
+
+}
