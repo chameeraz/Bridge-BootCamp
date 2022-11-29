@@ -1,0 +1,355 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font3);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  min-height: 100vh;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #24252a;
+}
+
+
+.logo {
+  cursor: pointer;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #0088a9;
+}
+
+.cta {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+.container-fluid {
+  max-width: 1200px
+}
+
+/*Card*/
+.card {
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+  border: 0;
+  border-radius: 1rem
+}
+
+.card-img,
+.card-img-top {
+  border-top-left-radius: calc(1rem - 1px);
+  border-top-right-radius: calc(1rem - 1px)
+}
+
+.card h5 {
+  overflow: hidden;
+  height: 56px;
+  font-weight: 900;
+  font-size: 1rem
+}
+
+.card-img-top {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  padding: 30px
+}
+
+.card h2 {
+  font-size: 1rem
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06)
+}
+
+
+.btn-warning:hover {
+  background: none #ff962b;
+  color: #ffffff;
+  box-shadow: -1px 6px 13px rgba(255, 150, 43, 0.35)
+}
+
+
+/* Mobile Nav */
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+}
+
+.footer {
+  background: #262626;
+}
+
+.footer .fa-github-square {
+  font-size: 30px;
+  color: white;
+  margin-right: 20px;
+}
+
+
+/*Login Page*/
+ 
+
+
+/****/
+
+/*Media Queries*/
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .nav__links,
+  .cta {
+    display: none;
+  }
+
+  .menu {
+    display: initial;
+  }
+}
+
+@media (max-width: 1025px) {
+  .btn {
+      padding: 5px 40px 5px 40px
+  }
+}
+
+@media (max-width: 250px) {
+  .btn {
+      padding: 5px 30px 5px 30px
+  }
+}
+
+
+@media (max-width: 768px) {
+  .card-img-top {
+      max-height: 250px
+  }
+}
+
+
+h3 {
+
+  font-size: 45px;
+  color: #a6afa8fb;
+
+  padding-left: 1%;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+/*---------------------style for form submit and reset button ------------------------------------------------*/
+input[type=submit],
+input[type=reset] {
+
+  display: inline-block;
+  background-color: #079c5ed2;
+  border-radius: 45px;
+  border: none;
+  color: rgb(244, 247, 245);
+  font-size: 16px;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative;
+  cursor: pointer;
+
+}
+
+/*---------------------when press the buttons after their feature-------------------*/
+input[type=submit]:hover,
+input[type=reset]:hover {
+
+  border: 1px solid #06a7bd;
+  background: #aa0481;
+  transition: 0.5s;
+}
+
+
+/*---------------------style for gender ------------------------------------------------*/
+select {
+  width: 20%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+}
+
+/*---------------------style for input details apperance ------------------------------------------------*/
+input[type=text],
+[type=email],
+[type=password] {
+  transition: width 0.4s ease-in-out;
+  border: none;
+  border-bottom: 1px solid rgb(150, 136, 136);
+  border-radius: 8px;
+  width: 400px;
+  height: 40px;
+  font-size: 16px;
+  color: #777;
+  font-family: 'Rubik', sans-serif;
+
+}
+
+.lbl-color{
+  background-color: rgba(145, 143, 143, 0.966);
+  font-weight: bolder;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.lbl-register{
+  color: white;
+}
+
+/*Side Category*/
+.sideCategory {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: #f1f1f1;
+
+}
+
+.sideCategory a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sideCategory a:hover {
+    color: #f1f1f1;
+}
+
+.sideCategory .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+} 
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sideCategory {
+        padding-top: 15px;
+    }
+
+    .sideCategory a {
+        font-size: 18px;
+    }
+}
+/*End Side Category*/

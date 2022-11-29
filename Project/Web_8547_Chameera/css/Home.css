@@ -1,0 +1,70 @@
+ .u-section-1 {
+  background-image: none;
+  min-height: 1002px;
+}
+
+.u-section-1 .u-shape-1 {
+  height: 279px;
+  margin-top: 252px;
+  margin-bottom: 0;
+  background-image: none;
+}
+
+.u-section-1 .u-image-1 {
+  width: 376px;
+  height: 376px;
+  background-image: url("../images/coffee.jpg");
+  background-position: 50% 50%;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: -471px auto 0;
+}
+
+.u-section-1 .u-text-1 {
+  letter-spacing: 4px;
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 45px 80px 0;
+}
+
+.u-section-1 .u-text-2 {
+  font-size: 1.125rem;
+  width: 727px;
+  margin: 45px auto 60px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-text-1 {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-2 {
+    width: 482px;
+  }
+}
+
+@media (max-width: 575px) {
+   .u-section-1 {
+    min-height: 798px;
+  }
+
+  .u-section-1 .u-shape-1 {
+    height: 226px;
+  }
+
+  .u-section-1 .u-image-1 {
+    width: 340px;
+    height: 340px;
+    margin-top: -418px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 3.75rem;
+  }
+
+  .u-section-1 .u-text-2 {
+    width: 340px;
+  }
+}

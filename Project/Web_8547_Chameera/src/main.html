@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eMobile</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styleCart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!--JavaScript-->
+    <script src="https://kit.fontawesome.com/05f1bca9fd.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <!--Symbol-->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="grid" viewBox="0 0 16 16">
+            <path
+                d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+        </symbol>
+    </svg>
+    <!-- Header -->
+    <header>
+        <a class="logo" href="../src/main.html"><img src="../images/LittleBugs.png" height="30" alt="logo"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="./main.html">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="./aboutUs.html">About us</a></li>
+            </ul>
+        </nav>
+        <div style="align-content:right;">
+
+            <a class="cta" href="#" data-toggle="modal" data-target="#exampleModalScrollable" onclick="cart()">
+                <span class="cart-info__icon mr-lg-3" style="font-size:20px; align-items: baseline;">
+                    <i class="fas fa-shopping-cart"></i> </a>
+            <a class="cta" href="./registration.html">Sign Up</a>
+        </div>
+        <p class="menu cta">Menu</p>
+    </header>
+    <!-- End Header -->
+    <main style="display: flex;">
+        <!--SideBar-->
+        <div id="sideCategory" class="sideCategory">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeBar()">×</a>
+
+            <div class="m-2">
+                <div class="mb-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label lbl-register" for="invalidCheck">
+                            Mobile Phones
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label lbl-register" for="invalidCheck">
+                            Laptops
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label lbl-register" for="invalidCheck">
+                            Desktops
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label lbl-register" for="invalidCheck">
+                            Accessories
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="main" class="d-flex flex-column flex-shrink-0 bg-light" style="width: 4.5rem;">
+            <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                <li>
+                    <a href="javascript:void(0)" onclick="openBar()" class="nav-link py-3 border-bottom">
+                        <svg class="bi" width="24" height="24" role="img" aria-label="Products">
+                            <use xlink:href="#grid" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--End SideBar-->
+        <!--Body-->
+
+
+        <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+            <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3" id="card-container">
+                <!---->
+            </div>
+        </div>
+
+
+    </main>
+    <!--Footer-->
+    <footer class="footer w-100 py-4 flex-shrink-0">
+        <div class="container py-4">
+            <div class="row gy-4 gx-5">
+                <div class="d-flex justify-content-center align-content-center">
+                    <p class="text-muted mb-0 text-center">
+                        &copy; 2022 LittleBugs All Rights Received.
+                    </p>
+                    <a target="_blank" href="https://github.com/virajwinhe/Bridge_LittleBugs">
+                        <i class="fab fa-github-square"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- modal starts here -->
+        <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalScrollableTitle">
+                            <i class="fas fa-cart-arrow-down"></i>
+                            Little Cart
+                        </h5>
+                        <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <i class="fa fa-times-circle" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- listing items starts -->
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <ul class="list" id="list">
+
+                            </ul>
+                            <div>
+                                <h3 class="bill px-5">Select Something</h3>
+                            </div>
+                        </div>
+                        <!-- listing items ends -->
+                    </div>
+                    <div class="modal-footer">
+                        <a href="checkout.html" class="btn btn-success checkout" target="_blank">Checkout</a>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal ends here -->
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="../javascript/gallary.js"></script>
+    <script type="text/javascript" src="../javascript/header.js"></script>
+    <script type="text/javascript" src="javascript/script.js" defer></script>
+    <script src="../bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="../javascript/sidebars.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

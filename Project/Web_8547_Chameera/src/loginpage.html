@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Login | eMobiles</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+
+<body style="  
+background-image: url('../images/coffee.jpg' ); 
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover">
+
+    <!--Main-->
+    <main>
+        <div class="container">
+            <div class="row py-5 mt-4 align-items-center justify-content-center">
+                <div class="col-md-5">
+                    <form class="g-3 needs-validation" action="./main.html" novalidate>
+
+                        <div class="mb-2">
+                            <label for="username" class="form-label lbl-color">Username</label>
+                            <input type="text" class="form-control w-100" id="username" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid Username.
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label for="pwd" class="form-label lbl-color">Password</label>
+                            <input type="password" class="form-control w-100" id="pwd" required>
+                        </div>
+
+                        <div class="col-12 mt-2 d-flex justify-content-around">
+                            <button class="btn btn-primary w-25" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

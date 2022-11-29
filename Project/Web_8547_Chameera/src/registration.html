@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <title>Registration</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/05f1bca9fd.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="  
+background-image: url('../images/Background4.jpg' ); 
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover">
+    <!-- Header -->
+    <header>
+        <a class="logo" href="../src/main.html"><img src="../images/LittleBugs.png" height="30" alt="logo"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="./main.html">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </nav>
+        <div style="align-content:right;">
+            <a class="cta" href="../src/main.html"><i class="fa fa-shopping-cart"
+                    style="font-size:20px; align-items: baseline;"></i></a>
+            <a class="cta" href="./registration.html">Sign Up</a>
+        </div>
+        <p class="menu cta">Menu</p>
+    </header>
+    <!-- End Header -->
+    <!--Main-->
+    <main>
+        <div class="container">
+            <div class="row py-5 mt-4 align-items-center justify-content-center">
+                <div class="col-md-5">
+                    <form class="g-3 needs-validation" novalidate>
+                        <div class="mb-2">
+                            <label for="fname" class="form-label  lbl-register">First name</label>
+                            <input type="text" class="form-control w-100" id="fname" value="" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="lname" class="form-label lbl-register">Last name</label>
+                            <input type="text" class="form-control w-100" id="lname" value="" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="phonenumber" class="form-label lbl-register">Phone Number</label>
+                            <input type="text" class="form-control w-100" id="lname" value="" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="birthday" class="form-label lbl-register">Birthday</label>
+                            <div class="input-group  w-100">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <input type="date" class="form-control" id="birthday    "
+                                    aria-describedby="inputGroupPrepend" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-2">
+                            <label for="gender" class="form-label lbl-register">Gender</label>
+                            <select class="form-select w-100" id="gender" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option value="male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-2">
+                            <label for="email" class="form-label lbl-register">Enter your email</label>
+                            <input type="email" class="form-control w-100" id="email" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label for="username" class="form-label lbl-register">Username</label>
+                            <input type="text" class="form-control w-100" id="username" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid Username.
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label for="pwd" class="form-label lbl-register">Password</label>
+                            <input type="password" class="form-control w-100" id="pwd" required>
+                        </div>
+                        <div class="mb-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label lbl-register" for="invalidCheck">
+                                    Agree to terms and conditions
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-around">
+                            <button class="btn btn-primary w-25" type="submit">Submit</button>
+                            <button class="btn btn-primary w-25" type="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!--Footer-->
+    <footer class="footer w-100 py-4 flex-shrink-0">
+        <div class="container py-4">
+            <div class="row gy-4 gx-5">
+                <div class="d-flex justify-content-center align-content-center">
+                    <p class="text-muted mb-0 text-center">
+                        &copy; 2022 LittleBugs All Rights Received.
+                    </p>
+                    <a target="_blank" href="https://github.com/virajwinhe/Bridge_LittleBugs">
+                        <i class="fab fa-github-square"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../javascript/header.js"></script>
+    <script src="assets/js/util.js"></script> 
+    <script src="assets/js/main.js"></script>
+</body>
+
+
+</html>
